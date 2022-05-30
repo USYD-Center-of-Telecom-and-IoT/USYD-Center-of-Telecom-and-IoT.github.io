@@ -29,7 +29,7 @@ module.exports = {
     entry: path.join(__dirname, "src", "index.js"),
     //entry: ['./src/index.js'],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '__web_resources__'),
         //filename: 'bundle.[hash:5].js'
         filename: 'bundle.js'
     },
@@ -68,13 +68,6 @@ module.exports = {
         ]
     },
     plugins: [
-      // 把html自动加入（需要的javascript文件会自动引入）
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, "src", "index.html"),
-        inject: 'body', // all javascript resources will be placed at the bottom of the body element.
-        favicon: "./src/favicon.ico"
-        //minify: true //压缩html，这个在设置production-mode时自动启用，不用配置
-      }),
       // 忽略 moment.js的所有本地文件 (https://webpack.js.org/plugins/ignore-plugin/)
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,

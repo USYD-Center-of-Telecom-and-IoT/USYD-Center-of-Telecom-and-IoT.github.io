@@ -1,0 +1,24 @@
+{
+  "name": "usyd-center-of-telecom-and-iot.github.io",
+  "version": "1.0.0",
+  "description": "The website to show the information of USYD Telecom Lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/USYD-Center-of-Telecom-and-IoT/USYD-Center-of-Telecom-and-IoT.github.io.git"
+  },
+  "keywords": [
+    "USYD",
+    "Telecom",
+    "Lab"
+  ],
+  "author": "Xinwei Qu",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/USYD-Center-of-Telecom-and-IoT/USYD-Center-of-Telecom-and-IoT.github.io/issues"
+  },
+  "homepage": "https://github.com/USYD-Center-of-Telecom-and-IoT/USYD-Center-of-Telecom-and-IoT.github.io#readme"
+}

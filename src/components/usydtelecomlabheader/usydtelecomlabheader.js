@@ -8,7 +8,7 @@ import {FormattedMessage} from 'react-intl'
 import { Layout, Menu} from 'antd';
 const { Header} = Layout;
 // antd-icon
-import { SkypeFilled, HomeFilled, AppstoreFilled, SettingFilled } from '@ant-design/icons';
+import { WifiOutlined, HomeFilled } from '@ant-design/icons';
 // antd-button
 import { Button } from 'antd';
 // utils
@@ -30,19 +30,19 @@ export class USYDTelecomLabHeader extends React.Component{
         let menuRestBtns = [];
         menuRestBtns.push(
             <Menu.Item key="1">
-                <AppstoreFilled />
-                <span><FormattedMessage id="header_menu_center"/></span>
-                <Link to="/center" />
+                <HomeFilled />
+                <span><FormattedMessage id="header_menu_home"/></span>
+                <Link to="/" />
             </Menu.Item>
         );
 
         return(
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                 <div className="usydtelecomlabheader-logo">
-                    <SkypeFilled className='Image'/>
+                    <WifiOutlined className='Image'/>
                     <span className='Txt'><FormattedMessage id="header_org_name"/></span>
                 </div>
-                <Menu className="usydtelecomlabheader-menu" theme="dark" mode="horizontal" selectedKeys={this.state.headerMenuSelectedIds} onClick={this.menuOnClick}>
+                <Menu className="usydtelecomlabheader-menu" theme="dark" mode="horizontal" selectedKeys={this.state.headerMenuSelectedIds}>
                     { menuRestBtns }
                 </Menu>
             </Header>

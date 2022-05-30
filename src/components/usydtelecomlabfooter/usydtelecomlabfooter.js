@@ -16,7 +16,7 @@ export class USYDTelecomLabFooter extends React.Component{
     render(){
         return(
             <Footer className='usydtelecomlabfooter'>
-                <p className='declare'>Copyright <CopyrightOutlined /> 2003-{moment().format('YYYY')}&nbsp;<FormattedMessage id="footer_company_name"/>
+                <p className='declare'>Copyright <CopyrightOutlined /> 2003-{moment().format('YYYY')}&nbsp;<FormattedMessage id="footer_org_name"/>
                 </p>
             </Footer>
         );

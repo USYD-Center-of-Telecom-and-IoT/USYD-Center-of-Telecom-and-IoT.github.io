@@ -2,7 +2,6 @@ const en_US = {
     // header
     header_org_name: 'USYD Telecom Lab',
     header_menu_home: 'Home',
-    header_menu_center: 'Dashboard',
 
 
     // footer

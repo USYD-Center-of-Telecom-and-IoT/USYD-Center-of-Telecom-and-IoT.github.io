@@ -22,7 +22,7 @@ export class Main extends React.Component{
             <>
                 <Content className='page-main-background'>
                     <div className="page-main-container" style={{ minHeight: 380 }}>
-                        <div className='Title'>
+                        {/* <div className='Title'>
                             <FormattedMessage id="main_blogger_title"/>
                             <div className='Subtitle'>
                                 <FormattedMessage id="main_blogger_subtitle"/>
@@ -44,7 +44,7 @@ export class Main extends React.Component{
                             <div className='Carousel-Indicator'>
                                 <div className='Image Image-5'/>
                             </div>
-                        </Carousel>
+                        </Carousel> */}
                         
                     </div>
                 </Content>

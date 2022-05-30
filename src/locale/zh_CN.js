@@ -1,7 +1,7 @@
 const zh_CN = {
     // header
     header_org_name: '悉尼大学通讯实验室',
-    header_org_home: '首页',
+    header_menu_home: '首页',
 
     // footer
     footer_org_name: '悉尼大学通讯实验室',

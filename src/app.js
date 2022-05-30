@@ -63,24 +63,23 @@ export class App extends React.Component{
      */
     render(){
         return(
-            <></>
-            // <IntlProvider locale={all_langs_codes[this.state.selected_lang_id]} messages={all_langs_pkg[this.state.selected_lang_id]}>
-            //     <BrowserView className='view-port-body'>
-            //         <Router>
-            //             <Layout className='view-port-body'>
-            //                 {/* <USYDTelecomLabHeader isLogin={this.state.isLogin} /> */}
-            //                 <div className='routers-container'>
-            //                     <Routes>
-            //                         {/* <Route exact path="/"       element={ <Main/> } />        */}
-            //                     </Routes>
-            //                 </div>
-            //             </Layout>
-            //         </Router>
-            //     </BrowserView>
-            //     <MobileView>
-            //         <h1>This is rendered only on mobile</h1>
-            //     </MobileView>
-            // </IntlProvider>
+            <IntlProvider locale={all_langs_codes[this.state.selected_lang_id]} messages={all_langs_pkg[this.state.selected_lang_id]}>
+                <BrowserView className='view-port-body'>
+                    <Router>
+                        <Layout className='view-port-body'>
+                            <USYDTelecomLabHeader />
+                            <div className='routers-container'>
+                                <Routes>
+                                    <Route exact path="/"       element={ <Main/> } />       
+                                </Routes>
+                            </div>
+                        </Layout>
+                    </Router>
+                </BrowserView>
+                <MobileView>
+                    <h1>This is rendered only on mobile</h1>
+                </MobileView>
+            </IntlProvider>
         );
     }
 }

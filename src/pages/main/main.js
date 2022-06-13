@@ -5,8 +5,6 @@ import {FormattedMessage} from 'react-intl'
 import { Layout} from 'antd';
 const { Content } = Layout;
 // antd
-// antd-走马灯
-import { Carousel } from 'antd';
 // antd-icon
 import { SnippetsTwoTone, WarningTwoTone, ApiTwoTone, EditTwoTone, MailTwoTone, LockTwoTone } from '@ant-design/icons';
 
@@ -20,32 +18,24 @@ export class Main extends React.Component{
     render(){
         return(
             <>
-                <Content className='page-main-background'>
-                    <div className="page-main-container" style={{ minHeight: 380 }}>
-                        {/* <div className='Title'>
-                            <FormattedMessage id="main_blogger_title"/>
-                            <div className='Subtitle'>
-                                <FormattedMessage id="main_blogger_subtitle"/>
-                            </div>
-                        </div>
-                        <Carousel autoplay>
-                            <div className='Carousel-Indicator'>
-                                <div className='Image Image-1'/>
-                            </div>
-                            <div className='Carousel-Indicator'>
-                                <div className='Image Image-2'/>
-                            </div>
-                            <div className='Carousel-Indicator'>
-                                <div className='Image Image-3'/>
-                            </div>
-                            <div className='Carousel-Indicator'>
-                                <div className='Image Image-4'/>
-                            </div>
-                            <div className='Carousel-Indicator'>
-                                <div className='Image Image-5'/>
-                            </div>
-                        </Carousel> */}
-                        
+                <Content className="page-main-container">
+                    <div className="" style={{minHeight: "720px"}}>
+                        <p className='title'>Telecom Lab</p>
+                        <ul className='content'>
+                            <li>This lab is led by Wibowo Hardjawana and Branka Vucetic in the University of Sydney.</li>
+                            <li>Wibowo Hardjawana's work aims to develop wireless network softwarisation. The emerging 5G mobile network will need to handle numerous types of traffic, including applications and devices ranging from the internet of things (IoT) to high-demand mobile broadband. These traffic types have elastic requirements with regard to bandwidth, latency and reliability, requiring network operators to regularly program their radio resources according to demand. While the radio access mobile networks of today will be interoperable with any of the above devices due to their conformance with standards, the software and interfaces used to manage radio resources remain proprietary 'black boxes' to everyone except the original equipment manufacturers.</li>
+                            <li>Professor Branka Vucetic's work aims to develop theoretical framework and design principles for wireless communication systems. She is an internationally recognised expert in coding theory and its applications in wireless engineering. Professor Vucetic has held various research and academic positions in the UK, Yugoslavia and Australia, and since 1986 she has been with the School of Electrical and Information Engineering at Sydney University, where she is currently Laureate Professor and Director of the Centre of Excellence in Telecommunications.</li>
+                        </ul>
+                        <p className='title'>Members</p>
+                        <ul className='memavatar'>
+                            <li><div className='box'><img src="/img/member-branka.jpg"/><div className='intro'>Branka Vucetic</div></div></li>
+                            <li><div className='box'><img src="/img/member-wibowo.jpg"/><div className='intro'>Wibowo Hardjawana</div></div></li>
+                            <li><div className='box'><img src="/img/member-alva.jpg"/><div className='intro'>Alva Kosasih</div></div></li>
+                            <li><div className='box'><img /><div className='intro'>Yuhong Liu</div></div></li>
+                            <li><div className='box'><img /><div className='intro'>Xinwei Qu</div></div></li>
+                            <li><div className='box'><img /><div className='intro'>Hao Chang</div></div></li>
+                            <li><div className='box'><img /><div className='intro'>Vincent Onasis</div></div></li>
+                        </ul>
                     </div>
                 </Content>
                 <USYDTelecomLabFooter/>

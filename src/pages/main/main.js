@@ -1,20 +1,45 @@
 import React from 'react';
-// react-intl 支持多语言
+// react-intl support multiple langs
 import {FormattedMessage} from 'react-intl'
+// data
+// members
+import { members } from "../../data/members"
+// utils
+// common functions
+import { sortObjArrByPropery } from '../../utils/commonfns';
 // antd-layout
 import { Layout} from 'antd';
 const { Content } = Layout;
 // antd
 // antd-icon
 import { SnippetsTwoTone, WarningTwoTone, ApiTwoTone, EditTwoTone, MailTwoTone, LockTwoTone } from '@ant-design/icons';
-
 // components
 import { USYDTelecomLabFooter } from "../../components/usydtelecomlabfooter/usydtelecomlabfooter";
-
-// 引入样式
+// css
 import "./main.less";
 
 export class Main extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            memberAvatar: null
+        };
+    }
+
+    // after the component is mounted to DOM
+    componentDidMount(){
+        // load the data
+        // sort members by the last name
+        sortObjArrByPropery(members, 'last_name');
+        let memberAvatar = [];
+        members.forEach((element, index)=>{
+            memberAvatar.push(<li key={index}><div className='box'><img src={element.img_url}/><div className='intro'><span className='txt'>{element.first_name} {element.last_name}</span></div></div></li>);
+        });
+        this.setState({
+            memberAvatar: memberAvatar
+        });
+    }
+
     render(){
         return(
             <>
@@ -27,14 +52,9 @@ export class Main extends React.Component{
                             <li>Professor Branka Vucetic's work aims to develop theoretical framework and design principles for wireless communication systems. She is an internationally recognised expert in coding theory and its applications in wireless engineering. Professor Vucetic has held various research and academic positions in the UK, Yugoslavia and Australia, and since 1986 she has been with the School of Electrical and Information Engineering at Sydney University, where she is currently Laureate Professor and Director of the Centre of Excellence in Telecommunications.</li>
                         </ul>
                         <p className='title'>Members</p>
+                        <p className='subtitle'>The list is sorted by the last name</p>
                         <ul className='memavatar'>
-                            <li><div className='box'><img src="/img/member-branka.jpg"/><div className='intro'><span className='txt'>Branka Vucetic</span></div></div></li>
-                            <li><div className='box'><img src="/img/member-wibowo.jpg"/><div className='intro'><span className='txt'>Wibowo Hardjawana</span></div></div></li>
-                            <li><div className='box'><img src="/img/member-alva.jpg"/><div className='intro'><span className='txt'>Alva Kosasih</span></div></div></li>
-                            <li><div className='box'><img /><div className='intro'><span className='txt'>Yuhong Liu</span></div></div></li>
-                            <li><div className='box'><img /><div className='intro'><span className='txt'>Xinwei Qu</span></div></div></li>
-                            <li><div className='box'><img /><div className='intro'><span className='txt'>Hao Chang</span></div></div></li>
-                            <li><div className='box'><img /><div className='intro'><span className='txt'>Vincent Onasis</span></div></div></li>
+                            {this.state.memberAvatar}
                         </ul>
                     </div>
                 </Content>

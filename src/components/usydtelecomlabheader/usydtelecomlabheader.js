@@ -27,14 +27,13 @@ export class USYDTelecomLabHeader extends React.Component{
 
     render(){
         // add `center` & `account` if login
-        let menuRestBtns = [];
-        menuRestBtns.push(
-            <Menu.Item key="1">
-                <HomeFilled />
-                <span><FormattedMessage id="header_menu_home"/></span>
-                <Link to="/" />
-            </Menu.Item>
-        );
+        let menuItems = [
+            {
+                key: "1",
+                icon: <HomeFilled />,
+                label: <><span><FormattedMessage id="header_menu_home"/></span><Link to="/" /></>
+            }
+        ];
 
         return(
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
@@ -42,9 +41,7 @@ export class USYDTelecomLabHeader extends React.Component{
                     <WifiOutlined className='Image'/>
                     <span className='Txt'><FormattedMessage id="header_org_name"/></span>
                 </div>
-                <Menu className="usydtelecomlabheader-menu" theme="dark" mode="horizontal" selectedKeys={this.state.headerMenuSelectedIds}>
-                    { menuRestBtns }
-                </Menu>
+                <Menu className="usydtelecomlabheader-menu" theme="dark" mode="horizontal" selectedKeys={this.state.headerMenuSelectedIds} items={menuItems} />
             </Header>
         )
     };

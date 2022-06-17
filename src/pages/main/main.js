@@ -28,13 +28,13 @@ export class Main extends React.Component{
                         </ul>
                         <p className='title'>Members</p>
                         <ul className='memavatar'>
-                            <li><div className='box'><img src="/img/member-branka.jpg"/><div className='intro'>Branka Vucetic</div></div></li>
-                            <li><div className='box'><img src="/img/member-wibowo.jpg"/><div className='intro'>Wibowo Hardjawana</div></div></li>
-                            <li><div className='box'><img src="/img/member-alva.jpg"/><div className='intro'>Alva Kosasih</div></div></li>
-                            <li><div className='box'><img /><div className='intro'>Yuhong Liu</div></div></li>
-                            <li><div className='box'><img /><div className='intro'>Xinwei Qu</div></div></li>
-                            <li><div className='box'><img /><div className='intro'>Hao Chang</div></div></li>
-                            <li><div className='box'><img /><div className='intro'>Vincent Onasis</div></div></li>
+                            <li><div className='box'><img src="/img/member-branka.jpg"/><div className='intro'><span className='txt'>Branka Vucetic</span></div></div></li>
+                            <li><div className='box'><img src="/img/member-wibowo.jpg"/><div className='intro'><span className='txt'>Wibowo Hardjawana</span></div></div></li>
+                            <li><div className='box'><img src="/img/member-alva.jpg"/><div className='intro'><span className='txt'>Alva Kosasih</span></div></div></li>
+                            <li><div className='box'><img /><div className='intro'><span className='txt'>Yuhong Liu</span></div></div></li>
+                            <li><div className='box'><img /><div className='intro'><span className='txt'>Xinwei Qu</span></div></div></li>
+                            <li><div className='box'><img /><div className='intro'><span className='txt'>Hao Chang</span></div></div></li>
+                            <li><div className='box'><img /><div className='intro'><span className='txt'>Vincent Onasis</span></div></div></li>
                         </ul>
                     </div>
                 </Content>

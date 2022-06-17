@@ -1,8 +1,23 @@
 @charset "utf-8";
 
-/*** 预先定义函数 ***/
+/*** predefined functions ***/
 /**
- * border-box分布（padding不撑开）
+ * text auto break
+ */
+.text-autobreak{
+  word-break: break-word;       // break words
+  word-wrap: break-word;        // IE
+  white-space: -moz-pre-wrap;   // Mozilla
+  white-space: -hp-pre-wrap;    // HP printers
+  white-space: -o-pre-wrap;     // Opera 7
+  white-space: -pre-wrap;       // Opera 4-6
+  white-space: pre;             // CSS2
+  white-space: pre-wrap;        // CSS 2.1
+  white-space: pre-line;        // CSS 3 (and 2.1 as well, actually)
+}
+
+/**
+ * border-box分布（padding doesn't extend dimensions）
  */
 .border-box{
   -moz-box-sizing: border-box; /*Firefox3.5+*/
@@ -12,9 +27,9 @@
   box-sizing: border-box;
 }
 /**
- * 计算一个变量
- * @property 属性名，如width
- * @quto 公式，如 '100% - 50px - 100px'，注意要加引号
+ * calculate a value
+ * @property: a property, such as `width`
+ * @quto: an expression，such as '100% - 50px - 100px' (qutos are necessary)
  */
 .calc(@property, @quto){
     @{property}: e("-moz-calc(@{quto})");
@@ -22,8 +37,8 @@
     @{property}: e("calc(@{quto})");
 }
 /**
- * transform变换
- * @quto: 具体的变换内容
+ * transform
+ * @quto: transform content
  */
  .transform(@quto){
     transform: @quto;

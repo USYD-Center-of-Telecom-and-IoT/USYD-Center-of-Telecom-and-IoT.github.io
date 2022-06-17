@@ -30,6 +30,7 @@
 }
 
 // member avatar
+@memavatar-img-dimen: 200px;                // member avatar image height & width
 .page-main-container ul.memavatar{
     list-style: none;
     font-size: 20px;
@@ -44,31 +45,38 @@
         vertical-align: top;
         .box{
             position:relative;
-            width: 200px;
-            height: 200px;
-            line-height: 200px;
+            width: @memavatar-img-dimen;
+            height: @memavatar-img-dimen;
             border-radius: 50%;
+            line-height: @memavatar-img-dimen;
+            text-align: center;
             background-color: @background-grey;
             overflow: hidden;
             img{
                 display: block;
-                width: 200px;
-                height: 200px;
+                width: @memavatar-img-dimen;
+                height: @memavatar-img-dimen;
                 border: none;
             }
             .intro{
                 display: none;
+                width: @memavatar-img-dimen;
+                height: @memavatar-img-dimen;
+                padding: 0;
+                margin: 0;
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                margin: 0;
                 background: @background-black-opacity-8;
-                color: @txt-white;
-                text-align: center;
-                font-size: 25px;
+                line-height: @memavatar-img-dimen;
+                .txt{
+                    display: inline-block;
+                    font-size: 25px;
+                    line-height: 30px;
+                    color: @txt-white;
+                    .text-autobreak;
+                    vertical-align: middle;
+                }
             }
         }
     }

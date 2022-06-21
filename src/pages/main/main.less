@@ -53,6 +53,7 @@
         padding: 20px;
         vertical-align: top;
         .box{
+            display: block;
             position:relative;
             width: @memavatar-img-dimen;
             height: @memavatar-img-dimen;
@@ -66,6 +67,9 @@
                 width: @memavatar-img-dimen;
                 height: @memavatar-img-dimen;
                 border: none;
+            }
+            .intro:first-child{
+                display: block;
             }
             .intro{
                 display: none;
@@ -88,9 +92,12 @@
                 }
             }
         }
-    }
-    li:hover .box .intro{
-        display: block;
+        // box hover
+        .box:hover{
+            .intro{
+                display: block;
+            }
+        }
     }
 }
 .page-main-container ul.memavatar:after{

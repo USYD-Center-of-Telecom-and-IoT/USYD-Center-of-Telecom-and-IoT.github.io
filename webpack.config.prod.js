@@ -17,7 +17,8 @@ let common = require("./webpack.config");
 let prod = {
     mode: 'production',
     output: {
-        filename: 'bundle.[hash:5].min.js'
+        //filename: 'bundle.[hash:5].min.js'
+        filename: 'bundle.min.js'
     },
     optimization:{
         moduleIds: 'deterministic',         // webpack优化-更新组件时在控制台输出组件的数字ID
@@ -73,11 +74,11 @@ let prod = {
         ]
     },
     plugins:[
-        new CleanWebpackPlugin(),       // 预先清理dist文件夹
-        // 单独打包css文件
+        new CleanWebpackPlugin(),       // clean the folder holding packed files
+        // pack CSS independently
         new MiniCssExtractPlugin({
-            filename: '[name].[hash:5].min.css',
-            chunkFilename: '[name].[id].[hash:5].min.css',
+            filename: '[name].min.css',
+            chunkFilename: '[name].[id].min.css',
         }),
         new BundleAnalyzerPlugin(),     // 分析打包情况
     ],

@@ -33,7 +33,12 @@ export class Main extends React.Component{
         sortObjArrByPropery(members, 'last_name');
         let memberAvatar = [];
         members.forEach((element, index)=>{
-            memberAvatar.push(<li key={index}><div className='box'><img src={element.img_url}/><div className='intro'><span className='txt'>{element.first_name} {element.last_name}</span></div></div></li>);
+            if(element.img_url && element.img_url != undefined && element.img_url != ""){
+                memberAvatar.push(<li key={index}><a href={element.link} className='box'><img src={element.img_url}/><div className='intro'><span className='txt'>{element.first_name} {element.last_name}</span></div></a></li>);
+            }else{
+                memberAvatar.push(<li key={index}><a href={element.link} className='box'><div className='intro'><span className='txt'>{element.first_name} {element.last_name}</span></div></a></li>);
+            }
+            
         });
         this.setState({
             memberAvatar: memberAvatar

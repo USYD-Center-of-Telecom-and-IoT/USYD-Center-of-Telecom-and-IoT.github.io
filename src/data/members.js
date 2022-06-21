@@ -34,7 +34,8 @@ const members = [
     {
         first_name: "Xinwei",
         middle_name: "",
-        last_name: "Qu"
+        last_name: "Qu",
+        img_url: "/img/member-xin.jpg"
     },
     {
         first_name: "Hao",
